@@ -1,1 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Julio Macedo - Portfólio de Editor de Vídeo</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" />
+  <link rel="stylesheet" href="res/style.css" />
+</head>
+<body>
+  <header>
+    <div class="header-logo">
+      <i class="bi bi-file-earmark-play"></i>
+      <span>Julio Macedo</span>
+    </div>
+    <nav class="header-nav">
+      <a href="#servicos">Serviços</a>
+      <a href="#portfolio">Portfólio</a>
+      <a href="#contato">Contato</a>
+    </nav>
+  </header>
 
+  <div class="container">
+    <section class="hero-section">
+      <h1>Julio Macedo - Editor de Vídeo</h1>
+      <p>Criando histórias impactantes com edição de vídeo dinâmica.</p>
+      <a href="#contato" class="contact-btn"><i class="bi bi-person-lines-fill"></i> Entre em Contato</a>
+
+      <div class="hero-videos">
+        <div class="video-embed"><iframe src="https://www.youtube.com/embed/WZdngxB8CeU" title="Video 1" allowfullscreen></iframe></div>
+        <div class="video-embed"><iframe src="https://www.youtube.com/embed/j4gyqzCs2R4" title="Video 2" allowfullscreen></iframe></div>
+        <div class="video-embed"><iframe src="https://www.youtube.com/embed/-FgkuarWLkk" title="Video 3" allowfullscreen></iframe></div>
+      </div>
+    </section>
+
+    <section class="services-section" id="servicos">
+      <h2>Meus serviços</h2>
+      <div class="services-grid">
+        <div class="service-card">
+          <i class="bi bi-scissors"></i>
+          <h3>Edição de Vídeo</h3>
+          <p>Edição profissional para canais, projetos e conteúdo para redes sociais.</p>
+        </div>
+        <div class="service-card">
+          <i class="bi bi-film"></i>
+          <h3>Motion Graphics</h3>
+          <p>Animações dinâmicas e efeitos visuais para enriquecer seus vídeos.</p>
+        </div>
+        <div class="service-card">
+          <i class="bi bi-music-note-beamed"></i>
+          <h3>Design de Som</h3>
+          <p>Edição de áudio personalizada e efeitos sonoros para experiências imersivas.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="portfolio-section" id="portfolio">
+      <h2>Portfólio</h2>
+      <div class="portfolio-grid">
+        <div class="video-embed"><iframe src="https://www.youtube.com/embed/E28rJqKSV_A" title="Shorts 1" allowfullscreen></iframe></div>
+        <div class="video-embed"><iframe src="https://www.youtube.com/embed/tL2X9pzk-Uw" title="Shorts 2" allowfullscreen></iframe></div>
+        <div class="video-embed"><iframe src="https://www.youtube.com/embed/hRcbSRcCxAQ" title="Shorts 3" allowfullscreen></iframe></div>
+        <div class="video-embed"><iframe src="https://www.youtube.com/embed/NK-BXEXP9-M" title="Shorts 4" allowfullscreen></iframe></div>
+        <div class="video-embed"><iframe src="https://www.youtube.com/embed/LZt2dhpMvf8" title="Shorts 5" allowfullscreen></iframe></div>
+        <div class="video-embed"><iframe src="https://www.youtube.com/embed/2Kw5vwRF1OQ" title="Shorts 6" allowfullscreen></iframe></div>
+      </div>
+    </section>
+
+    <section class="contact-section" id="contato">
+      <h2>Entre em contato</h2>
+      <div class="contact-info">
+        <div>
+          <i class="bi bi-envelope"></i>
+          <a href="mailto:contato.etz@hotmail.com">contato.etz@hotmail.com</a>
+        </div>
+        <div>
+          <i class="bi bi-instagram"></i>
+          <a href="https://instagram.com/jotarcyt">@JotaRCyt</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="sobre-section" id="sobre-mim">
+      <h2>Sobre Mim</h2>
+      <div class="sobre-mim-container">
+        <img src="res/jota.png" alt="Julio Macedo" class="foto-perfil" />
+        <h3>Julio Macedo</h3>
+        <p>Sou um editor de vídeo apaixonado por transformar ideias em narrativas visuais cativantes. Com experiência em edição profissional, motion graphics e design de som, crio conteúdos dinâmicos para redes sociais, canais e projetos especiais.</p>
+      </div>
+    </section>
+  </div>
+
+  <footer>
+    <p>© 2025 Julio Macedo.</p>
+  </footer>
+
+  <script>
+    document.querySelectorAll('.header-nav a, .contact-btn').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        const targetId = this.getAttribute('href').substring(1);
+        const targetElement = document.getElementById(targetId);
+        if (targetElement) {
+          targetElement.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+      });
+    });
+  </script>
+</body>
+</html>
